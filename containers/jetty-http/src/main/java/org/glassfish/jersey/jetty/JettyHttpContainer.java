@@ -198,7 +198,7 @@ public final class JettyHttpContainer extends AbstractHandler implements Contain
         if (configSetStatusOverSendError) {
             response.reset();
             //noinspection deprecation
-            response.setStatus(BAD_REQUEST_STATUS.getStatusCode(), BAD_REQUEST_STATUS.getReasonPhrase());
+            response.setStatus(BAD_REQUEST_STATUS.getStatusCode());
         } else {
             response.sendError(BAD_REQUEST_STATUS.getStatusCode(), BAD_REQUEST_STATUS.getReasonPhrase());
         }
@@ -367,7 +367,7 @@ public final class JettyHttpContainer extends AbstractHandler implements Contain
                         if (configSetStatusOverSendError) {
                             response.reset();
                             //noinspection deprecation
-                            response.setStatus(INTERNAL_SERVER_ERROR, "Request failed.");
+                            response.setStatus(INTERNAL_SERVER_ERROR);
                         } else {
                             response.sendError(INTERNAL_SERVER_ERROR, "Request failed.");
                         }
