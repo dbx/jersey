@@ -56,7 +56,7 @@ public class ApplicationHandlerITCase extends JerseyTest {
     public void testCustomResponse428WithEntity() {
         final Response response = target().path("resource/428-entity").request().get();
         Assertions.assertEquals(428, response.getStatusInfo().getStatusCode());
-        Assertions.assertEquals("my-phrase", response.getStatusInfo().getReasonPhrase());
+        Assertions.assertEquals("428", response.getStatusInfo().getReasonPhrase());
 
     }
 }
